@@ -16,9 +16,9 @@ export default {
 <template>
 
   <body>
-    <div class="fmcontainer test">
+    <div class="fmcontainer">
 
-      <div class="container-fluid test2">
+      <div class="container-fluid">
 
 
         <div class="row ">
