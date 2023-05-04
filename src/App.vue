@@ -38,6 +38,7 @@ export default {
         console.log(store.filmArray)
       })
     },
+
 },
 
 mounted(){
@@ -50,7 +51,7 @@ mounted(){
 </script>
 <template>
 
-  <Header />
+  <Header @searchFilm="getApi" />
 
   <Loader v-if="store.isLoad"/>
 

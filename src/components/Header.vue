@@ -1,10 +1,11 @@
 <script>
+import {store} from "../data/store";
 
 export default {
   name: "Header",
   data(){
     return{
-      
+      store
     }
   }
 }
@@ -50,8 +51,8 @@ export default {
         </div>
       
       <form class="fm-form d-flex al-item-cent" role="search">
-        <input class="form-control me-3" type="search" placeholder="Cerca un film o una serie Tv" aria-label="Search">
-        <button class="btn me-5 text-bg-light" type="submit">Cerca</button>
+        <input v-model="store.searchTitle" @keyup.enter="$emit('searchFilm')" class="form-control me-3" type="search" placeholder="Cerca un film o una serie Tv" aria-label="Search">
+        <button class="btn me-5 text-bg-light" @click="$emit('searchFilm')" type="submit">Cerca</button>
       </form>
     </div>
 
