@@ -1,0 +1,47 @@
+
+.test{
+  background-color: rgba(255, 0, 0, 0.555);
+  border: 1px solid black;
+}
+
+.test2{
+  background-color: rgba(0, 0, 255, 0.448);
+  border: 1px solid black;
+}
+
+.test3{
+  background-color: rgba(0, 128, 0, 0.57);
+  border: 1px solid black;
+}
+
+.d-flex{
+  display: flex;
+}
+
+.j-cont-aro{
+  justify-content: space-around;
+}
+
+.j-cont-bet{
+  justify-content: space-between;
+}
+
+.j-cont-cent{
+  justify-content: center;
+}
+
+.al-item-cent{
+  align-items: center;
+}
+
+.j-cont-start{
+  justify-content: flex-start;
+}
+
+.j-cont-end{
+  justify-content: flex-end;
+}
+
+.flex-dir-col{
+  flex-direction: column;
+}

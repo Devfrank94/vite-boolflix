@@ -1,16 +1,20 @@
 
 <script>
-// Facciamo l'import dei componenti che utilizzaremo all'interno del template
+
 import Header from "./components/Header.vue"
 import Main from "./components/Main.vue"
 import Footer from "./components/Footer.vue"
+import Loader from "./components/partials/Loader.vue";
+// import axios from 'axios';
+// import {store} from './data/store';
 
 export default {
   name:'App',
   components:{
     Header,
     Main,
-    Footer
+    Footer,
+    Loader
   }
 }
 </script>
@@ -18,10 +22,15 @@ export default {
 
   <Header />
 
+  <Loader />
+
+  <div>
+
   <Main />
 
   <Footer />
 
+  </div>
   
 </template>
 

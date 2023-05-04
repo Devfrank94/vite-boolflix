@@ -1,16 +1,47 @@
 <script>
+
+// import {store} from "../data/store";
+// import Card from "./Card.vue";
+
 export default {
   name:'Main',
   data(){
     return {
-    
+    // Card
     }
   },
 }
 
 </script>
 <template>
-  <h1>Main</h1>
+
+  <body>
+    <div class="fmcontainer test">
+
+      <div class="container-fluid test2">
+
+
+        <div class="row ">
+            
+            
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+  
 
 
   
