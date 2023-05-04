@@ -20,7 +20,7 @@ export default {
 
           <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <button class="navbar-toggler text-bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -50,7 +50,7 @@ export default {
         </div>
       
       <form class="fm-form d-flex al-item-cent" role="search">
-        <input class="form-control me-3" type="search" placeholder="Search" aria-label="Search">
+        <input class="form-control me-3" type="search" placeholder="Cerca un film o una serie Tv" aria-label="Search">
         <button class="btn me-5 text-bg-light" type="submit">Cerca</button>
       </form>
     </div>
