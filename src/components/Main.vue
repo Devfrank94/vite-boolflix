@@ -33,7 +33,7 @@ export default {
               :title="film.title"
               :original_title="film.original_title"
               :original_language="film.original_language"
-              :vote_average="film.vote_average" />
+              :vote_average="Math.ceil(film.vote_average/2)" />
             
         </div>
 
@@ -50,7 +50,7 @@ export default {
               :title="serie.name"
               :original_title="serie.original_name"
               :original_language="serie.original_language"
-              :vote_average="serie.vote_average" />
+              :vote_average="Math.ceil(serie.vote_average/2)" />
             
         </div>
 
@@ -59,7 +59,6 @@ export default {
       <div class="container-fluid">
 
         <h1 v-if="store.popularArray.length > 0">Popolari</h1>
-        <i class="fa-solid fa-star" style="color: #f2ca28;"></i>
         <div class="row row-cols-5">
           <Card
               v-for
@@ -69,7 +68,7 @@ export default {
               :title="film.title"
               :original_title="film.original_title"
               :original_language="film.original_language"
-              :vote_average="film.vote_average" />
+              :vote_average="Math.ceil(film.vote_average/2)" />
               
         </div>
       </div>
@@ -91,7 +90,8 @@ export default {
   @use '../scss/main.scss' as *;
 
   body{
-    background-color: $bg-secondary; 
+    background-color: $bg-secondary;
+    color: white; 
   }
 
 </style>
