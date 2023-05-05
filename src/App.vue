@@ -25,7 +25,7 @@ export default {
 
   methods:{
 
-        // Richiamo APi per Popolari
+        // Richiamo API per Popolari
         getApiPopular(){
       store.isLoad = true;
       axios.get(store.apiUrlPopular)
@@ -41,7 +41,7 @@ export default {
     },
 
 
-    // Richiamo APi per Film
+    // Richiamo API per Film
     getApi(){
       store.isLoad = true;
       axios.get(store.apiUrl, {
@@ -60,7 +60,7 @@ export default {
       })
     },
 
-    // Richiamo Api Serie Tv
+    // Richiamo API Serie Tv
     getApiSeries(){
       store.isLoad = true;
       axios.get(store.apiUrlTv, {
