@@ -6,7 +6,7 @@ export const store = reactive({
   searchTitle: '',
   filmArray: [],
 
-  isLoad: true,
+  isLoad: false,
 
 
 })

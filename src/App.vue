@@ -5,8 +5,8 @@ import Header from "./components/Header.vue"
 import Main from "./components/Main.vue"
 import Footer from "./components/Footer.vue"
 import Loader from "./components/partials/Loader.vue";
-import axios from 'axios';
 import {store} from './data/store';
+import axios from 'axios';
 
 export default {
   name:'App',
@@ -26,6 +26,8 @@ export default {
   methods:{
     getApi(){
       store.isLoad = true;
+      console.log("getApi", store.apiUrl)
+      console.log("getApi", store.searchTitle)
       axios.get(store.apiUrl, {
         params:{
           query: store.searchTitle,
@@ -37,12 +39,15 @@ export default {
         store.filmArray = result.data.results;
         console.log(store.filmArray)
       })
+      .catch(error => {
+        console.log(error.response)
+      })
     },
 
 },
 
 mounted(){
-    this.getApi();
+    // this.getApi();
     // this.getCardTypes()
   }
 
