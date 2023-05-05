@@ -16,7 +16,7 @@ export default {
 
     <!--  -->
     <img v-if="image != null" :src="`https://image.tmdb.org/t/p/w342${image}`" :alt="original_title" :title="original_title">
-    <img v-else src="../assets/" :alt="original_title" :title="original_title">
+    <img v-else src="../assets/img/No-Image-Placeholder.png" :alt="original_title" :title="original_title">
 
       <div class="info pt-2">
         <h4 class="py-1">{{ title }}</h4>
