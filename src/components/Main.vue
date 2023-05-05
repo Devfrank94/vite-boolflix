@@ -29,6 +29,7 @@ export default {
               v-for
               ="film in store.filmArray"
               :key="film.id"
+              :image="film.poster_path"
               :title="film.title"
               :original_title="film.original_title"
               :original_language="film.original_language"
@@ -45,6 +46,7 @@ export default {
               v-for
               ="serie in store.seriesArray"
               :key="serie.id"
+              :image="serie.poster_path"
               :title="serie.name"
               :original_title="serie.original_name"
               :original_language="serie.original_language"
@@ -62,6 +64,7 @@ export default {
               v-for
               ="film in store.popularArray"
               :key="film.id"
+              :image="film.poster_path"
               :title="film.title"
               :original_title="film.original_title"
               :original_language="film.original_language"

@@ -13,14 +13,17 @@ export default {
 
 <template>
   <div class="fm-card col mb-3">
-    <div class="info pt-2">
-      <h4 class="py-1">{{ title }}</h4>
-      <h6 class="py-1">{{ original_title }}</h6>
-      <span>Lingua:</span>
-        <img :src="`/src/assets/img/flags/language-${original_language}.svg`" class="ms-2" :alt="original_language" :title="original_language">
+    
+    <img :src="`https://image.tmdb.org/t/p/w342${image}`" :alt="original_title" :title="original_title">
 
-      <p class="py-1">{{ vote_average }}</p>
-    </div>
+      <div class="info pt-2">
+        <h4 class="py-1">{{ title }}</h4>
+        <h6 class="py-1">{{ original_title }}</h6>
+        <span>Lingua:</span>
+          <img :src="`/src/assets/img/flags/language-${original_language}.svg`" class="ms-2" :alt="original_language" :title="original_language">
+
+        <p class="py-1">{{ vote_average }}</p>
+      </div>
   </div>
 </template>
 
