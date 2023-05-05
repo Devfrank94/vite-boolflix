@@ -24,10 +24,10 @@ export default {
   },
 
   methods:{
+
+    // Richiamo APi per Film
     getApi(){
       store.isLoad = true;
-      console.log("getApi", store.apiUrl)
-      console.log("getApi", store.searchTitle)
       axios.get(store.apiUrl, {
         params:{
           query: store.searchTitle,
@@ -44,11 +44,29 @@ export default {
       })
     },
 
+    // Richiamo Api Serie Tv
+    getApiSeries(){
+      store.isLoad = true;
+      axios.get(store.apiUrlTv, {
+        params:{
+          query: store.searchTitle,
+          
+        }
+      })
+      .then(result => {
+        store.isLoad = false;
+        store.seriesArray = result.data.results;
+        console.log(store.seriesArray)
+      })
+      .catch(error => {
+        console.log(error.response)
+      })
+    },
+
 },
 
 mounted(){
-    // this.getApi();
-    // this.getCardTypes()
+    
   }
 
 }
@@ -56,7 +74,7 @@ mounted(){
 </script>
 <template>
 
-  <Header @searchFilm="getApi" />
+  <Header @searchFilm="getApi" @searchSeries="getApiSeries" />
 
   <Loader v-if="store.isLoad"/>
 

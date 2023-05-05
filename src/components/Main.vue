@@ -23,16 +23,32 @@ export default {
 
       <div class="container-fluid">
 
-
-        <div class="row ">
+        <h1 v-if="store.filmArray.length > 0">Film</h1>
+        <div class="row row-cols-5">
           <Card
               v-for
-              ="card in store.filmArray"
-              :key="card.id"
-              :title="card.title"
-              :original_title="card.original_title"
-              :original_language="card.original_language"
-              :vote_average="card.vote_average" />
+              ="film in store.filmArray"
+              :key="film.id"
+              :title="film.title"
+              :original_title="film.original_title"
+              :original_language="film.original_language"
+              :vote_average="film.vote_average" />
+            
+        </div>
+
+      </div>
+      <div class="container-fluid">
+
+        <h1 v-if="store.seriesArray.length > 0">Serie TV</h1>
+        <div class="row row-cols-5">
+          <Card
+              v-for
+              ="serie in store.seriesArray"
+              :key="serie.id"
+              :title="serie.title"
+              :original_title="serie.original_title"
+              :original_language="serie.original_language"
+              :vote_average="serie.vote_average" />
             
         </div>
 
