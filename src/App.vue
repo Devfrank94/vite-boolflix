@@ -25,6 +25,22 @@ export default {
 
   methods:{
 
+        // Richiamo APi per Popolari
+        getApiPopular(){
+      store.isLoad = true;
+      axios.get(store.apiUrlPopular)
+
+      .then(result => {
+        store.isLoad = false;
+        store.popularArray = result.data.results;
+        console.log(store.popularArray)
+      })
+      .catch(error => {
+        console.log(error.response)
+      })
+    },
+
+
     // Richiamo APi per Film
     getApi(){
       store.isLoad = true;
@@ -66,7 +82,8 @@ export default {
 },
 
 mounted(){
-    
+  this.getApiPopular()
+
   }
 
 }

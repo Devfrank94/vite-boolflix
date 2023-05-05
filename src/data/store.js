@@ -5,10 +5,13 @@ export const store = reactive({
 
   apiUrlTv: "https://api.themoviedb.org/3/search/tv?api_key=cdf53e91c5e183d5e9639c1057dd8b4c&language=it-IT",
 
+  apiUrlPopular: "https://api.themoviedb.org/3/movie/popular?api_key=cdf53e91c5e183d5e9639c1057dd8b4c&language=it-IT",
+  
+
   searchTitle: '',
   filmArray: [],
   seriesArray: [],
-
+  popularArray: [],
 
   isLoad: false,
 

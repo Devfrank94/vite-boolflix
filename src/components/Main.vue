@@ -23,6 +23,22 @@ export default {
 
       <div class="container-fluid">
 
+        <h1 v-if="store.popularArray.length > 0">Popolari</h1>
+        <div class="row row-cols-5">
+          <Card
+              v-for
+              ="film in store.popularArray"
+              :key="film.id"
+              :title="film.title"
+              :original_title="film.original_title"
+              :original_language="film.original_language"
+              :vote_average="film.vote_average" />
+            
+        </div>
+      </div>
+
+      <div class="container-fluid">
+
         <h1 v-if="store.filmArray.length > 0">Film</h1>
         <div class="row row-cols-5">
           <Card
