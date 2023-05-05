@@ -45,8 +45,8 @@ export default {
               v-for
               ="serie in store.seriesArray"
               :key="serie.id"
-              :title="serie.title"
-              :original_title="serie.original_title"
+              :title="serie.name"
+              :original_title="serie.original_name"
               :original_language="serie.original_language"
               :vote_average="serie.vote_average" />
             

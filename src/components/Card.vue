@@ -2,9 +2,11 @@
 export default {
   name: 'Card',
   props:{
+    image: String,
     title: String,
     original_title: String,
     original_language: String,
+    language: String,
     vote_average: Number
   }
 }
