@@ -6,7 +6,6 @@ export default {
     title: String,
     original_title: String,
     original_language: String,
-    language: String,
     vote_average: Number
   }
 }
@@ -14,11 +13,12 @@ export default {
 
 <template>
   <div class="fm-card col mb-3">
-    <!-- <img :src="img[0].image_url" :alt="name"> -->
     <div class="info pt-2">
       <h4 class="py-1">{{ title }}</h4>
       <h6 class="py-1">{{ original_title }}</h6>
-      <h6 class="py-1">{{ original_language }}</h6>
+      <span>Lingua:</span>
+        <img :src="`/src/assets/img/flags/language-${original_language}.svg`" class="ms-2" :alt="original_language" :title="original_language">
+
       <p class="py-1">{{ vote_average }}</p>
     </div>
   </div>
