@@ -13,8 +13,10 @@ export default {
 
 <template>
   <div class="fm-card col mb-3">
-    
-    <img :src="`https://image.tmdb.org/t/p/w342${image}`" :alt="original_title" :title="original_title">
+
+    <!--  -->
+    <img v-if="image != null" :src="`https://image.tmdb.org/t/p/w342${image}`" :alt="original_title" :title="original_title">
+    <img v-else src="../assets/" :alt="original_title" :title="original_title">
 
       <div class="info pt-2">
         <h4 class="py-1">{{ title }}</h4>

@@ -59,6 +59,7 @@ export default {
       <div class="container-fluid">
 
         <h1 v-if="store.popularArray.length > 0">Popolari</h1>
+        <i class="fa-solid fa-star" style="color: #f2ca28;"></i>
         <div class="row row-cols-5">
           <Card
               v-for
@@ -69,19 +70,11 @@ export default {
               :original_title="film.original_title"
               :original_language="film.original_language"
               :vote_average="film.vote_average" />
-            
+              
         </div>
       </div>
 
     </div>
-
-
-
-
-
-
-
-
 
 
 
@@ -96,5 +89,9 @@ export default {
 <style lang="scss" scoped>
 
   @use '../scss/main.scss' as *;
+
+  body{
+    background-color: $bg-secondary; 
+  }
 
 </style>
