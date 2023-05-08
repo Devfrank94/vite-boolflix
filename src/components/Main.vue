@@ -23,7 +23,7 @@ export default {
 
       <div class="container-fluid">
 
-        <h1 v-if="store.filmArray.length > 0">Film</h1>
+        <h1 class="my-3" v-if="store.filmArray.length > 0">Film</h1>
         <div class="row row-cols-5">
           <Card
               v-for
@@ -40,7 +40,7 @@ export default {
       </div>
       <div class="container-fluid">
 
-        <h1 v-if="store.seriesArray.length > 0">Serie TV</h1>
+        <h1 class="my-3" v-if="store.seriesArray.length > 0">Serie TV</h1>
         <div class="row row-cols-5">
           <Card
               v-for
@@ -58,7 +58,7 @@ export default {
 
       <div class="container-fluid">
 
-        <h1 v-if="store.popularArray.length > 0">Popolari</h1>
+        <h1 class="my-3" v-if="store.popularArray.length > 0">Popolari</h1>
         <div class="row row-cols-5">
           <Card
               v-for
