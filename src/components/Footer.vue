@@ -14,7 +14,6 @@ export default {
   
   <footer>
 
-    <h1>Footer</h1>
 
 
   </footer>
@@ -26,7 +25,9 @@ export default {
   @use '../scss/main.scss' as *;
 
   footer{
-    background-color: $bg-secondary;
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(42,45,47,1) 25%); 
+  height: 150px;
   }
 
 </style>

@@ -49,7 +49,6 @@ export default {
 	height: 450px;
 	max-width: 445px;
   aspect-ratio: 2 / 3;
-	margin: 0 auto;
 	position: relative;
 }
 .wrapper {
@@ -95,7 +94,7 @@ export default {
   
 
   .cont-info{
-    background-color: gray;
+    background-image: linear-gradient(to top, #cfd9df 0%, #a0a2a3 100%);
 
     .info{
       min-height: 250px;

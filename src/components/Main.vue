@@ -1,5 +1,8 @@
 <script>
-
+// import { Swiper, SwiperSlide } from 'swiper/vue';
+// import { Mousewheel, Pagination } from 'swiper';
+// import 'swiper/css';
+// import 'swiper/css/pagination';
 import {store} from "../data/store";
 import Card from "./Card.vue";
 
