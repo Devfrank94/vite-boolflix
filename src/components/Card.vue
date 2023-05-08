@@ -12,8 +12,8 @@ export default {
 </script>
 
 <template>
-<div class="wrapper">
-  <div class="fm-card col mb-3">
+<div class="wrapper my-2">
+  <div class="fm-card">
 
     <!-- In questa condizione se non esiste immagine poster viene sotituita con immagine default(No image) -->
     <div class="front">
@@ -23,7 +23,7 @@ export default {
       <div class="cont-info p-2 d-flex j-cont-cent">
         <div class="info pt-3 al-item-cent">
           <h1 class="py-1">{{ title }}</h1>
-          <h2 class="py-1">{{ original_title }}</h2>
+          <h2 class="py-1"> Titolo Originale: {{ original_title }}</h2>
 
           <span>Lingua:</span>
             <img :src="`/src/assets/img/flags/language-${original_language}.svg`" class="ms-2 flag" :alt="original_language" :title="original_language">
@@ -44,9 +44,49 @@ export default {
 <style lang="scss" scoped>
 @use '../scss/main.scss' as *;
 
+
+.wrapper, .fm-card {
+	height: 450px;
+	max-width: 445px;
+  aspect-ratio: 2 / 3;
+	margin: 0 auto;
+	position: relative;
+}
+.wrapper {
+	perspective: 900px;
+}
+
+.wrapper:hover .fm-card {
+	transform: rotateY(180deg);
+}
+.front, .cont-info {
+	width: 300px;
+	position: relative;
+	top: 0;
+	left: 0;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.front {
+	cursor: pointer;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.cont-info {
+	transform: rotateY(180deg);
+	position: absolute;
+	height: 450px;
+	background: #fff;
+}
+.info {
+	padding-top: 25%;
+}
 .fm-card{
   text-align: center;
   cursor: pointer;
+	transition: all 1.5s cubic-bezier(0.7, -0.5, 0.3, 1.8);
+	transform-style: preserve-3d;
   
   img{
     height: 445px;
@@ -61,11 +101,11 @@ export default {
       min-height: 250px;
   
       h1{
-        font-size: 1.6rem;
+        font-size: 1.4rem;
       }
   
       h2{
-        font-size: 1.2rem;
+        font-size: 1rem;
       }
   
       img{
@@ -84,57 +124,3 @@ export default {
 
 
 </style>
-
-.wrapper, .single-card {
-	height: 450px;
-	max-width: 300px;
-	margin: 0 auto;
-	position: relative;
-}
-.wrapper {
-	perspective: 900px;
-}
-.single-card {
-	text-align: center;
-	transition: all 1.5s cubic-bezier(0.7, -0.5, 0.3, 1.8);
-	transform-style: preserve-3d;
-}
-.wrapper:hover .single-card {
-	transform: rotateY(180deg);
-}
-.front, .back {
-	width: 300px;
-	position: relative;
-	top: 0;
-	left: 0;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-}
-.front {
-	cursor: pointer;
-	height: 100%;
-	background-image: url(1.jpg);
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-	border-radius: 50px;
-	background-size: cover;
-	background-position: center center;
-}
-.back {
-	transform: rotateY(180deg);
-	position: absolute;
-	border-radius: 50px;
-	height: 450px;
-	background: #fff;
-}
-.content {
-	padding-top: 25%;
-}
-.content h2 {
-	font-size: 35px;
-	margin: 0;
-	font-weight: 300;
-}
-.content h4 {
-	margin: 0;
-}
