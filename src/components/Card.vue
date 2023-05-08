@@ -12,12 +12,12 @@ export default {
 </script>
 
 <template>
-<div class="wrapper my-2">
+<div class="wrapper mb-4">
   <div class="fm-card">
 
     <!-- In questa condizione se non esiste immagine poster viene sotituita con immagine default(No image) -->
     <div class="front">
-      <img v-if="image != null" :src="`https://image.tmdb.org/t/p/w342${image}`" :alt="original_title" :title="original_title">
+      <img v-if="image != null" :src="`https://image.tmdb.org/t/p/w300${image}`" :alt="original_title" :title="original_title">
       <img v-else src="../assets/img/No-Image-Placeholder.png" :alt="original_title" :title="original_title">
     </div>
       <div class="cont-info p-2 d-flex j-cont-cent">
@@ -44,11 +44,8 @@ export default {
 <style lang="scss" scoped>
 @use '../scss/main.scss' as *;
 
-
+// Style custom card
 .wrapper, .fm-card {
-	height: 450px;
-	max-width: 445px;
-  aspect-ratio: 2 / 3;
 	position: relative;
 }
 .wrapper {
@@ -59,12 +56,13 @@ export default {
 	transform: rotateY(180deg);
 }
 .front, .cont-info {
-	width: 300px;
+	width: 100%;
 	position: relative;
 	top: 0;
 	left: 0;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
+  border-radius: 10px;
 }
 .front {
 	cursor: pointer;
@@ -75,20 +73,26 @@ export default {
 .cont-info {
 	transform: rotateY(180deg);
 	position: absolute;
-	height: 450px;
+	height: 100%;
 	background: #fff;
 }
 .info {
 	padding-top: 25%;
 }
+// /Style custom card
+
+
 .fm-card{
   text-align: center;
   cursor: pointer;
 	transition: all 1.5s cubic-bezier(0.7, -0.5, 0.3, 1.8);
 	transform-style: preserve-3d;
   
+  
   img{
-    height: 445px;
+    object-fit: contain;
+    height: 450px;
+    border-radius: 10px;
   }
 
   
